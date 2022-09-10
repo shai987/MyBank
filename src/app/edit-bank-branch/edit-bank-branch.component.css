@@ -1,0 +1,11 @@
+input{
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+}
+:invalid{background-color: #ff4040;}
+:valid{background-color: rgb(110, 184, 110);}
+.button2{
+        background-color: transparent;
+        background-color: #000;
+}

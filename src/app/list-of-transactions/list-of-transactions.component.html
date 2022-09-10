@@ -1,0 +1,22 @@
+<h2>Transaction list page</h2>
+<p class='yellow' *ngIf=" arrayTransiction.length == 0">No transactions were found in the account</p>
+<table class="table table-bordered" *ngIf="arrayTransiction.length >0" dir="ltr" border="2">
+
+        <tr>
+                <th>Transaction number</th>
+                <th>Action date</th>
+                <th>Type of action</th>
+                <th>Amount</th>
+                <th>The current balance</th>
+        </tr>
+
+        <tr *ngFor='let i of arrayTransiction' [class.redBac]='i.balance<0'>
+                <a routerLink="{{'/Transaction/' + i.count}}" (click)='transictoinSelected(i)'>
+                        <td>{{i.count}}</td>
+                </a>
+                <td>{{i.trnDate|date:'dd/MM/yyyy'}}</td>
+                <td>{{transactionTypeNames[i.trnTyp]}}</td>
+                <td>{{i.amount|currency:'ILS'}}</td>
+                <td><bdo dir="ltr">{{i.balance|currency:'ILS'}}</bdo></td>
+        </tr>
+</table>

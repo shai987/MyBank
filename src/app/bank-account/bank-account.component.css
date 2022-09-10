@@ -1,0 +1,50 @@
+h1,
+p {
+        text-align: center;
+}
+
+h1 {
+        color: blue;
+}
+
+.minus {
+        color: #ff4040;
+}
+
+input,
+textarea {
+        direction: ltr;
+}
+
+.transaction {
+        margin-right: auto;
+        margin-left: auto;
+        ;
+        text-align: center;
+}
+
+:invalid {
+        background-color: #ff4040;
+}
+
+.notshown {
+        display: none;
+}
+
+.deposit {
+        width: 50px;
+}
+
+:valid {
+        background-color: rgb(110, 184, 110);
+}
+
+#note,
+#sugpeula {
+        background-color: transparent;
+}
+
+#clickdTra {
+        background-color: transparent;
+        background-color: #000;
+}

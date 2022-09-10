@@ -1,0 +1,15 @@
+div,input{
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+}
+a{
+        text-decoration: none;
+        color: #fff;
+}
+input:hover{
+        opacity:0.8;
+}
+.zero{
+        background-color: #ff4040
+}

@@ -1,0 +1,40 @@
+<div class="container" dir=ltr>
+    <h2>Transaction fill page</h2>
+    <p>
+        <label for=amount>Amount:</label>
+        <input required type=number id=amount min={{getMin()}} [(ngModel)]="currentAmount" />
+        <br />
+        <br />
+        <label for=asmachta>Order number:</label>
+        <textarea id=asmachta minlength="4" [(ngModel)]="currentTransactionAsmachta"></textarea>
+        <br />
+        <br />
+        <label for=taarich>Date:</label>
+        <input required type="date" id="taarich" [(ngModel)]="currentTransactionDateS" />
+        <br />
+        <br />
+        <label for=sugpeula>Type of action:</label>
+        <select required id=sugpeula [(ngModel)]="currentTransactionType">
+            <option value="-1">Please choose</option>
+            <option *ngIf="getArrayLength()===0" value="0">Open account</option>
+            <option value="1">Deposit</option>
+            <option *ngIf="getArrayLength()>0" value="2">withdraw</option>
+        </select>
+        <br />
+        <br />
+        <label for=note>Note:</label>
+        <textarea id=note [(ngModel)]="note"></textarea>
+        <br />
+        <br />
+        <button id="clickdTra" (click)='doTransaction();'>Add Action</button>
+        <br />
+        <br />
+    </p>
+    <p *ngIf="!lastActionFail">
+        {{transaction}}
+    </p>
+    <p *ngIf="lastActionFail" dir="ltr">
+        Your request has been rejected due to an expected exception of the credit limit of <bdo
+            dir="ltr">{{accountDetails.limit|currency:'ILS'}}</bdo>
+    </p>
+</div>

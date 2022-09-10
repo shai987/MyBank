@@ -1,0 +1,19 @@
+.redBac {
+        background-color: #ff4040;
+}
+
+table,
+h2 {
+        margin-right: auto;
+        margin-left: auto;
+}
+
+h2 {
+        text-align: center;
+}
+
+.yellow {
+        background-color: yellow;
+        text-align: center;
+        font-size: 78px;
+}

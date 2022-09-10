@@ -1,0 +1,17 @@
+<div *ngIf="getShouldAppered()">
+        <div dir="ltr">
+                <p>Account holder: {{owner}}</p> |
+                <p class="zero" [class.zero]='currentBalance<0'> Current balance:
+                        <bdo dir="ltr">{{currentBalance|currency:'ILS'}}</bdo>
+                </p>
+
+        </div>
+        <hr class="style-eight">
+        <a routerLink="/EditBankBranch"> <button>Change Branch Details</button></a>
+        <a routerLink="/AccountOwner"> <button>Account Holder Details</button></a>
+        <a routerLink="/ListOfTransaction"> <button>Transaction List</button></a>
+        <a routerLink="/BankAccount"> <button>Transaction Fill </button></a>
+        <a routerLink="/ChangePassword"> <button>Change Password</button></a>
+        <button (click)="logOut()">Log Out</button>&nbsp;
+        <hr class="style-eight">
+</div>

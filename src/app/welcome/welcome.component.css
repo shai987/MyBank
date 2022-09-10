@@ -1,0 +1,14 @@
+dt {
+        font-weight: bold;
+        font-size: 20px;
+}
+
+dd {
+        direction: ltr;
+        font-size: 14px;
+}
+
+div {
+        text-align: center;
+        direction: ltr;
+}

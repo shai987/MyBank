@@ -1,0 +1,27 @@
+<div class="container">
+        <div>
+                <h2>Bank branch details change page</h2>
+                <span *ngIf="!edit" dir=ltr>
+                        Branch details: {{editBank}}
+                </span>
+                <br><br>
+                <button class="button2" (click)="setDetails(editBank)">
+                        {{(!edit)?"Edit branch details":"Save branch details"}}
+                </button>
+        </div>
+        <div *ngIf="edit" dir="ltr">
+                <label for=branchName>Branch name:</label>
+                <input required type=text id=branchName minlength="4" ngModel [(ngModel)]="editBank.branchName">
+                <br>
+                <label for=branchNumber>Branch number:</label>
+                <input required type=text id=branchNumber minlength="3" maxlength="3"
+                        [(ngModel)]="editBank.branchNumber">
+                <br>
+                <label>Bank name:</label>
+                <input disabled type=text [(ngModel)]="editBank.bankName">
+                <br>
+                <label for=accountNumber>Account number:</label>
+                <input disabled type=text id=accountNumber [(ngModel)]="editBank.accountNumber">
+                <br>
+        </div>
+</div>

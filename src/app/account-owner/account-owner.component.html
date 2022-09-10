@@ -1,0 +1,31 @@
+<div class="container">
+    <div>
+        <h2>Page of the account holder</h2>
+        <br>
+        <span *ngIf="!edit" dir=ltr>
+            Account holder: {{owner.name}}
+        </span>
+        <br>
+        <img [src]="(owner.hasPicture)?'assets/images/'+owner.tz+'.png':'assets/images/noImage.png'" height="80">
+        <br>
+        <button class="button2" (click)="setDetails()">
+            {{(!edit)?"Edit account details":"Save account details"}}
+        </button>
+    </div>
+
+    <div *ngIf="edit" dir="ltr">
+        <label for=shem>name:</label>
+        <input required type=text id=shem minlength="4" ngModel [(ngModel)]="owner.name">
+        <br>
+        <label for=adrs>address:</label>
+        <input required type=text id=adrs minlength="2" [(ngModel)]="owner.address">
+        <br>
+        <label for=tzNum>ID number:</label>
+        <input type=number id=tzNum value={{owner.tz}} disabled>
+        <br>
+        <label for=pic>Picture:</label>
+        <input type=checkbox id=pic [(ngModel)]="owner.hasPicture">
+        <br>
+    </div>
+
+</div>

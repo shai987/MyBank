@@ -1,0 +1,29 @@
+<div dir=ltr>
+        <h2>View transaction details page</h2>
+        <br>
+        <label for=count>Transaction number:</label>
+        <input readonly id=count [value]="transiction?.count">
+        <br><br>
+        <label for=amount>Amount:</label>
+        <input readonly id=amount [value]="transiction?.amount|currency:'ILS'">
+        <br><br>
+        <label for=balance>Current balance:</label>
+        <bdo dir="ltr"><input readonly id=balance [value]="transiction?.balance|currency:'ILS'"></bdo>
+        <br><br>
+        <label for=asmachta>Order number:</label>
+        <input readonly id=asmachta [value]="transiction?.asmachta">
+        <br><br>
+        <label for=taarich>Date:</label>
+        <input readonly id=taarich [value]="transiction?.trnDate|date:'dd/MM/yyyy'">
+        <br><br>
+        <label for=sugpeula>Type of action:</label>
+        <input readonly id=sugpeula
+                [value]="transiction?.trnTyp==0?'openAcount':transiction?.trnTyp==1?'deposit':'withdraw'">
+        <br><br>
+        <label for=note>Note:</label>
+        <input readonly id=note [value]="transiction?.note">
+        <br><br>
+        <button><a routerLink="/ListOfTransaction">Back to list</a></button>
+        &nbsp;
+        <button (click)="deleteTransiction()">Delete</button>
+</div>
