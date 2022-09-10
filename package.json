@@ -1,6 +1,7 @@
 {
   "name": "MyBank",
   "version": "0.0.0",
+  "description": "Development a website for bank using local storage, JavaScript, Angular, CSS, HTML.",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
