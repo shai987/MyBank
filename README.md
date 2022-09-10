@@ -1,5 +1,5 @@
 # Mybank
-This project is a website for bank using local storage, JavaScript, Angular, CSS, HTML.
+This project is a website for bank using local storage, JavaScript, Angular, CSS, HTML.<br />
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.2.
 
 ## Development server
